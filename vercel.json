@@ -25,7 +25,7 @@
     },
     {
       "src": "/v1/stats/youtube/sub-count",
-      "dest": "v1/stats/youtube/stats-logic-index.js"
+      "dest": "v1/stats/youtube/youtube-subcount-logic.js"
     }
   ]
 }
