@@ -2,30 +2,30 @@
   "version": 2,
   "builds": [
     {
-      "src": "stats/youtube/stats-logic-index.js",
+      "src": "v1/stats/youtube/youtube-subcount-logic.js",
       "use": "@vercel/node"
     },
     {
-      "src": "fan-submissions/user/fan-submissions-logic-index.js",
+      "src": "v1/fan-submissions/user/user-logic.js",
       "use": "@vercel/node"
     },
     {
-      "src": "fan-submissions/admin/fan-submissions-admin-logic-index.js",
+      "src": "v1/fan-submissions/admin/admin-logic.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/v1/user/view-form/submit-fan-mail",
-      "dest": "fan-submissions/user/fan-submissions-logic-index.js"
+      "dest": "v1/fan-submissions/user/user-logic.js"
     },
     {
       "src": "/v1/admin/view-form/fan-submissions",
-      "dest": "fan-submissions/admin/fan-submissions-admin-logic-index.js"
+      "dest": "v1/fan-submissions/admin/admin-logic.js"
     },
     {
-      "src": "/v1/stats/youtube/live-sub-count",
-      "dest": "stats/youtube/stats-logic-index.js"
+      "src": "/v1/stats/youtube/sub-count",
+      "dest": "v1/stats/youtube/stats-logic-index.js"
     }
   ]
 }
