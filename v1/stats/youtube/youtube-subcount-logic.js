@@ -59,7 +59,7 @@ async function getLiveSubscriberCount(forceRefresh = false) {
 
 app.use(express.static('public'));
 
-app.get('/v1/stats/youtube/live-sub-count', async (req, res) => {
+app.get('/v1/stats/youtube/sub-count', async (req, res) => {
     const forceRefresh = req.query.forceRefresh === 'true';
     const subscriberCount = await getLiveSubscriberCount(forceRefresh);
 
